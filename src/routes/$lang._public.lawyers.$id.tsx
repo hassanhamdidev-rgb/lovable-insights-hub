@@ -44,7 +44,7 @@ function LawyerDetail() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{lawyer.name}</h1>
           <p className="mt-1 text-muted-foreground">{lawyer.title}</p>
           <div className="mt-3 flex flex-wrap gap-2">
-            {lawyer.fields.map((f) => (
+            {lawyer.fields.map((f: string) => (
               <span key={f} className="rounded-full bg-secondary px-2.5 py-0.5 text-xs text-secondary-foreground">
                 {fieldName(f)}
               </span>
