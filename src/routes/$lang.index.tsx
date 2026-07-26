@@ -124,64 +124,86 @@ function Hero() {
   const { lang } = useParams({ from: "/$lang/" });
 
   return (
-    <section className="relative isolate overflow-hidden border-b border-border/60">
-      {/* Cover image */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src={heroImage.url}
-          alt="LawVera — legal management system"
-          className="h-full w-full object-cover object-center animate-slow-zoom"
-          loading="eager"
+    <section className="relative isolate overflow-hidden border-b border-border/60 bg-background">
+      {/* Soft ambient background — modern light-mode canvas */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-32 -left-24 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl" />
+        <div className="absolute -bottom-40 -right-24 h-[520px] w-[520px] rounded-full bg-primary/10 blur-3xl" />
+        <div
+          className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08]"
+          style={{
+            backgroundImage:
+              "radial-gradient(currentColor 1px, transparent 1px)",
+            backgroundSize: "22px 22px",
+            color: "var(--foreground)",
+          }}
         />
-        {/* Legibility overlays — tuned for both themes */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#071426]/40 via-[#071426]/25 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/55 to-transparent rtl:bg-gradient-to-l" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-24 md:px-6 md:py-36 lg:py-44">
-        <div className="max-w-2xl animate-fade-in-up">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/40 bg-card/80 px-3 py-1 text-xs font-medium text-foreground/80 shadow-sm backdrop-blur">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:py-20 md:px-6 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-14 lg:py-32">
+        {/* Copy column */}
+        <div className="animate-fade-in-up text-center lg:text-start">
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/40 bg-card/90 px-3 py-1 text-xs font-medium text-foreground/80 shadow-sm backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 animate-pulse text-accent" />
             AI-assisted legal workflow
           </span>
-          <h1 className="mt-5 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="mt-5 text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
             Run your legal practice —{" "}
             <span className="bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x">
               without the paperwork.
             </span>
           </h1>
-          <p className="mt-6 max-w-xl text-base text-foreground/80 md:text-lg">
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-sm text-muted-foreground sm:mt-6 sm:text-base md:text-lg lg:mx-0">
             LawVera brings law offices, lawyers, employees, and clients together in one
             multi-tenant workspace. Manage cases, documents, hearings, and billing with an AI
             assistant, in 7 languages including full RTL Arabic.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center lg:justify-start justify-center">
             <Link
               to="/$lang/dashboard" params={{ lang }}
-              className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 ring-1 ring-primary/10 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-primary/40"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 ring-1 ring-primary/10 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-primary/40"
             >
               Start free{" "}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
             </Link>
             <a
               href="#how"
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground shadow-sm backdrop-blur transition-colors hover:bg-card"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card/80 px-5 py-3 text-sm font-semibold text-foreground shadow-sm backdrop-blur transition-colors hover:bg-card"
             >
               See how it works
             </a>
           </div>
-          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 rounded-xl border border-border/60 bg-card/60 p-5 shadow-sm backdrop-blur text-sm">
+          <dl className="mx-auto mt-10 grid max-w-lg grid-cols-3 gap-3 rounded-2xl border border-border/70 bg-card/80 p-4 shadow-sm backdrop-blur sm:gap-6 sm:p-5 lg:mx-0">
             {[
               { k: "Law offices", v: "1,200+" },
               { k: "Cases handled", v: "84k" },
               { k: "Languages", v: "7" },
             ].map((s) => (
-              <div key={s.k}>
-                <dt className="text-muted-foreground">{s.k}</dt>
-                <dd className="mt-1 text-2xl font-semibold tabular-nums text-foreground">{s.v}</dd>
+              <div key={s.k} className="min-w-0 text-center lg:text-start">
+                <dt className="truncate text-[11px] uppercase tracking-wide text-muted-foreground sm:text-xs">{s.k}</dt>
+                <dd className="mt-1 text-lg font-semibold tabular-nums text-foreground sm:text-2xl">{s.v}</dd>
               </div>
             ))}
           </dl>
+        </div>
+
+        {/* Visual column — framed cover card */}
+        <div className="relative animate-fade-in">
+          <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-accent/25 via-transparent to-primary/20 blur-2xl" aria-hidden />
+          <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-card shadow-2xl shadow-primary/10 ring-1 ring-black/5">
+            <img
+              src={heroImage.url}
+              alt="LawVera — legal management system"
+              className="h-full w-full object-cover animate-slow-zoom"
+              loading="eager"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071426]/30 via-transparent to-transparent" />
+          </div>
+          {/* Floating accent chip */}
+          <div className="absolute -bottom-4 start-4 hidden items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground shadow-lg sm:inline-flex">
+            <span className="h-2 w-2 rounded-full bg-accent" />
+            Trusted by 1,200+ firms
+          </div>
         </div>
       </div>
     </section>
