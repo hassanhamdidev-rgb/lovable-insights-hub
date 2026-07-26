@@ -9,51 +9,51 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangRouteImport } from './routes/$lang'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
-import { Route as LangAppRouteImport } from './routes/$lang._app'
 import { Route as LangPublicRouteImport } from './routes/$lang._public'
-import { Route as LangAppDashboardRouteImport } from './routes/$lang._app.dashboard'
-import { Route as LangPublicAboutRouteImport } from './routes/$lang._public.about'
-import { Route as LangPublicContactRouteImport } from './routes/$lang._public.contact'
-import { Route as LangPublicHelpCenterRouteImport } from './routes/$lang._public.help-center'
-import { Route as LangPublicPrivacyRouteImport } from './routes/$lang._public.privacy'
+import { Route as LangAppRouteImport } from './routes/$lang._app'
 import { Route as LangPublicTermsAndConditionsRouteImport } from './routes/$lang._public.terms-and-conditions'
-import { Route as LangAppDashboardIndexRouteImport } from './routes/$lang._app.dashboard.index'
-import { Route as LangAppDashboardAnalyticsRouteImport } from './routes/$lang._app.dashboard.analytics'
-import { Route as LangAppDashboardCalendarRouteImport } from './routes/$lang._app.dashboard.calendar'
-import { Route as LangAppDashboardClientsRouteImport } from './routes/$lang._app.dashboard.clients'
-import { Route as LangAppDashboardDocumentsRouteImport } from './routes/$lang._app.dashboard.documents'
-import { Route as LangAppDashboardFieldsRouteImport } from './routes/$lang._app.dashboard.fields'
-import { Route as LangAppDashboardMessagesRouteImport } from './routes/$lang._app.dashboard.messages'
-import { Route as LangAppDashboardPostsRouteImport } from './routes/$lang._app.dashboard.posts'
-import { Route as LangAppDashboardServicesRouteImport } from './routes/$lang._app.dashboard.services'
-import { Route as LangAppDashboardSettingRouteImport } from './routes/$lang._app.dashboard.setting'
-import { Route as LangAppDashboardTasksRouteImport } from './routes/$lang._app.dashboard.tasks'
-import { Route as LangAppDashboardTeamRouteImport } from './routes/$lang._app.dashboard.team'
-import { Route as LangAppDashboardTransactionRouteImport } from './routes/$lang._app.dashboard.transaction'
-import { Route as LangPublicClientsIndexRouteImport } from './routes/$lang._public.clients.index'
-import { Route as LangPublicClientsIdRouteImport } from './routes/$lang._public.clients.$id'
-import { Route as LangPublicFieldsIndexRouteImport } from './routes/$lang._public.fields.index'
-import { Route as LangPublicFieldsSlugRouteImport } from './routes/$lang._public.fields.$slug'
-import { Route as LangPublicLawyersIndexRouteImport } from './routes/$lang._public.lawyers.index'
-import { Route as LangPublicLawyersIdRouteImport } from './routes/$lang._public.lawyers.$id'
-import { Route as LangPublicPostsIndexRouteImport } from './routes/$lang._public.posts.index'
-import { Route as LangPublicPostsSlugRouteImport } from './routes/$lang._public.posts.$slug'
+import { Route as LangPublicPrivacyRouteImport } from './routes/$lang._public.privacy'
+import { Route as LangPublicHelpCenterRouteImport } from './routes/$lang._public.help-center'
+import { Route as LangPublicContactRouteImport } from './routes/$lang._public.contact'
+import { Route as LangPublicAboutRouteImport } from './routes/$lang._public.about'
+import { Route as LangAppDashboardRouteImport } from './routes/$lang._app.dashboard'
 import { Route as LangPublicServiceIndexRouteImport } from './routes/$lang._public.service.index'
+import { Route as LangPublicPostsIndexRouteImport } from './routes/$lang._public.posts.index'
+import { Route as LangPublicLawyersIndexRouteImport } from './routes/$lang._public.lawyers.index'
+import { Route as LangPublicFieldsIndexRouteImport } from './routes/$lang._public.fields.index'
+import { Route as LangPublicClientsIndexRouteImport } from './routes/$lang._public.clients.index'
+import { Route as LangAppDashboardIndexRouteImport } from './routes/$lang._app.dashboard.index'
 import { Route as LangPublicServiceSlugRouteImport } from './routes/$lang._public.service.$slug'
+import { Route as LangPublicPostsSlugRouteImport } from './routes/$lang._public.posts.$slug'
+import { Route as LangPublicLawyersIdRouteImport } from './routes/$lang._public.lawyers.$id'
+import { Route as LangPublicFieldsSlugRouteImport } from './routes/$lang._public.fields.$slug'
+import { Route as LangPublicClientsIdRouteImport } from './routes/$lang._public.clients.$id'
+import { Route as LangAppDashboardTransactionRouteImport } from './routes/$lang._app.dashboard.transaction'
+import { Route as LangAppDashboardTeamRouteImport } from './routes/$lang._app.dashboard.team'
+import { Route as LangAppDashboardTasksRouteImport } from './routes/$lang._app.dashboard.tasks'
+import { Route as LangAppDashboardSettingRouteImport } from './routes/$lang._app.dashboard.setting'
+import { Route as LangAppDashboardServicesRouteImport } from './routes/$lang._app.dashboard.services'
+import { Route as LangAppDashboardPostsRouteImport } from './routes/$lang._app.dashboard.posts'
+import { Route as LangAppDashboardMessagesRouteImport } from './routes/$lang._app.dashboard.messages'
+import { Route as LangAppDashboardFieldsRouteImport } from './routes/$lang._app.dashboard.fields'
+import { Route as LangAppDashboardDocumentsRouteImport } from './routes/$lang._app.dashboard.documents'
+import { Route as LangAppDashboardClientsRouteImport } from './routes/$lang._app.dashboard.clients'
+import { Route as LangAppDashboardCalendarRouteImport } from './routes/$lang._app.dashboard.calendar'
+import { Route as LangAppDashboardAnalyticsRouteImport } from './routes/$lang._app.dashboard.analytics'
 import { Route as LangAppDashboardCasesIndexRouteImport } from './routes/$lang._app.dashboard.cases.index'
 import { Route as LangAppDashboardCasesIdRouteImport } from './routes/$lang._app.dashboard.cases.$id'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LangRoute = LangRouteImport.update({
   id: '/$lang',
   path: '/$lang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangIndexRoute = LangIndexRouteImport.update({
@@ -61,38 +61,13 @@ const LangIndexRoute = LangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LangRoute,
 } as any)
-const LangAppRoute = LangAppRouteImport.update({
-  id: '/_app',
-  getParentRoute: () => LangRoute,
-} as any)
 const LangPublicRoute = LangPublicRouteImport.update({
   id: '/_public',
   getParentRoute: () => LangRoute,
 } as any)
-const LangAppDashboardRoute = LangAppDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => LangAppRoute,
-} as any)
-const LangPublicAboutRoute = LangPublicAboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicContactRoute = LangPublicContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicHelpCenterRoute = LangPublicHelpCenterRouteImport.update({
-  id: '/help-center',
-  path: '/help-center',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicPrivacyRoute = LangPublicPrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => LangPublicRoute,
+const LangAppRoute = LangAppRouteImport.update({
+  id: '/_app',
+  getParentRoute: () => LangRoute,
 } as any)
 const LangPublicTermsAndConditionsRoute =
   LangPublicTermsAndConditionsRouteImport.update({
@@ -100,48 +75,105 @@ const LangPublicTermsAndConditionsRoute =
     path: '/terms-and-conditions',
     getParentRoute: () => LangPublicRoute,
   } as any)
+const LangPublicPrivacyRoute = LangPublicPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicHelpCenterRoute = LangPublicHelpCenterRouteImport.update({
+  id: '/help-center',
+  path: '/help-center',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicContactRoute = LangPublicContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicAboutRoute = LangPublicAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangAppDashboardRoute = LangAppDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => LangAppRoute,
+} as any)
+const LangPublicServiceIndexRoute = LangPublicServiceIndexRouteImport.update({
+  id: '/service/',
+  path: '/service/',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicPostsIndexRoute = LangPublicPostsIndexRouteImport.update({
+  id: '/posts/',
+  path: '/posts/',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicLawyersIndexRoute = LangPublicLawyersIndexRouteImport.update({
+  id: '/lawyers/',
+  path: '/lawyers/',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicFieldsIndexRoute = LangPublicFieldsIndexRouteImport.update({
+  id: '/fields/',
+  path: '/fields/',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicClientsIndexRoute = LangPublicClientsIndexRouteImport.update({
+  id: '/clients/',
+  path: '/clients/',
+  getParentRoute: () => LangPublicRoute,
+} as any)
 const LangAppDashboardIndexRoute = LangAppDashboardIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => LangAppDashboardRoute,
 } as any)
-const LangAppDashboardAnalyticsRoute =
-  LangAppDashboardAnalyticsRouteImport.update({
-    id: '/analytics',
-    path: '/analytics',
+const LangPublicServiceSlugRoute = LangPublicServiceSlugRouteImport.update({
+  id: '/service/$slug',
+  path: '/service/$slug',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicPostsSlugRoute = LangPublicPostsSlugRouteImport.update({
+  id: '/posts/$slug',
+  path: '/posts/$slug',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicLawyersIdRoute = LangPublicLawyersIdRouteImport.update({
+  id: '/lawyers/$id',
+  path: '/lawyers/$id',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicFieldsSlugRoute = LangPublicFieldsSlugRouteImport.update({
+  id: '/fields/$slug',
+  path: '/fields/$slug',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangPublicClientsIdRoute = LangPublicClientsIdRouteImport.update({
+  id: '/clients/$id',
+  path: '/clients/$id',
+  getParentRoute: () => LangPublicRoute,
+} as any)
+const LangAppDashboardTransactionRoute =
+  LangAppDashboardTransactionRouteImport.update({
+    id: '/transaction',
+    path: '/transaction',
     getParentRoute: () => LangAppDashboardRoute,
   } as any)
-const LangAppDashboardCalendarRoute =
-  LangAppDashboardCalendarRouteImport.update({
-    id: '/calendar',
-    path: '/calendar',
-    getParentRoute: () => LangAppDashboardRoute,
-  } as any)
-const LangAppDashboardClientsRoute = LangAppDashboardClientsRouteImport.update({
-  id: '/clients',
-  path: '/clients',
+const LangAppDashboardTeamRoute = LangAppDashboardTeamRouteImport.update({
+  id: '/team',
+  path: '/team',
   getParentRoute: () => LangAppDashboardRoute,
 } as any)
-const LangAppDashboardDocumentsRoute =
-  LangAppDashboardDocumentsRouteImport.update({
-    id: '/documents',
-    path: '/documents',
-    getParentRoute: () => LangAppDashboardRoute,
-  } as any)
-const LangAppDashboardFieldsRoute = LangAppDashboardFieldsRouteImport.update({
-  id: '/fields',
-  path: '/fields',
+const LangAppDashboardTasksRoute = LangAppDashboardTasksRouteImport.update({
+  id: '/tasks',
+  path: '/tasks',
   getParentRoute: () => LangAppDashboardRoute,
 } as any)
-const LangAppDashboardMessagesRoute =
-  LangAppDashboardMessagesRouteImport.update({
-    id: '/messages',
-    path: '/messages',
-    getParentRoute: () => LangAppDashboardRoute,
-  } as any)
-const LangAppDashboardPostsRoute = LangAppDashboardPostsRouteImport.update({
-  id: '/posts',
-  path: '/posts',
+const LangAppDashboardSettingRoute = LangAppDashboardSettingRouteImport.update({
+  id: '/setting',
+  path: '/setting',
   getParentRoute: () => LangAppDashboardRoute,
 } as any)
 const LangAppDashboardServicesRoute =
@@ -150,77 +182,45 @@ const LangAppDashboardServicesRoute =
     path: '/services',
     getParentRoute: () => LangAppDashboardRoute,
   } as any)
-const LangAppDashboardSettingRoute = LangAppDashboardSettingRouteImport.update({
-  id: '/setting',
-  path: '/setting',
+const LangAppDashboardPostsRoute = LangAppDashboardPostsRouteImport.update({
+  id: '/posts',
+  path: '/posts',
   getParentRoute: () => LangAppDashboardRoute,
 } as any)
-const LangAppDashboardTasksRoute = LangAppDashboardTasksRouteImport.update({
-  id: '/tasks',
-  path: '/tasks',
-  getParentRoute: () => LangAppDashboardRoute,
-} as any)
-const LangAppDashboardTeamRoute = LangAppDashboardTeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => LangAppDashboardRoute,
-} as any)
-const LangAppDashboardTransactionRoute =
-  LangAppDashboardTransactionRouteImport.update({
-    id: '/transaction',
-    path: '/transaction',
+const LangAppDashboardMessagesRoute =
+  LangAppDashboardMessagesRouteImport.update({
+    id: '/messages',
+    path: '/messages',
     getParentRoute: () => LangAppDashboardRoute,
   } as any)
-const LangPublicClientsIndexRoute = LangPublicClientsIndexRouteImport.update({
-  id: '/clients/',
-  path: '/clients/',
-  getParentRoute: () => LangPublicRoute,
+const LangAppDashboardFieldsRoute = LangAppDashboardFieldsRouteImport.update({
+  id: '/fields',
+  path: '/fields',
+  getParentRoute: () => LangAppDashboardRoute,
 } as any)
-const LangPublicClientsIdRoute = LangPublicClientsIdRouteImport.update({
-  id: '/clients/$id',
-  path: '/clients/$id',
-  getParentRoute: () => LangPublicRoute,
+const LangAppDashboardDocumentsRoute =
+  LangAppDashboardDocumentsRouteImport.update({
+    id: '/documents',
+    path: '/documents',
+    getParentRoute: () => LangAppDashboardRoute,
+  } as any)
+const LangAppDashboardClientsRoute = LangAppDashboardClientsRouteImport.update({
+  id: '/clients',
+  path: '/clients',
+  getParentRoute: () => LangAppDashboardRoute,
 } as any)
-const LangPublicFieldsIndexRoute = LangPublicFieldsIndexRouteImport.update({
-  id: '/fields/',
-  path: '/fields/',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicFieldsSlugRoute = LangPublicFieldsSlugRouteImport.update({
-  id: '/fields/$slug',
-  path: '/fields/$slug',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicLawyersIndexRoute = LangPublicLawyersIndexRouteImport.update({
-  id: '/lawyers/',
-  path: '/lawyers/',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicLawyersIdRoute = LangPublicLawyersIdRouteImport.update({
-  id: '/lawyers/$id',
-  path: '/lawyers/$id',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicPostsIndexRoute = LangPublicPostsIndexRouteImport.update({
-  id: '/posts/',
-  path: '/posts/',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicPostsSlugRoute = LangPublicPostsSlugRouteImport.update({
-  id: '/posts/$slug',
-  path: '/posts/$slug',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicServiceIndexRoute = LangPublicServiceIndexRouteImport.update({
-  id: '/service/',
-  path: '/service/',
-  getParentRoute: () => LangPublicRoute,
-} as any)
-const LangPublicServiceSlugRoute = LangPublicServiceSlugRouteImport.update({
-  id: '/service/$slug',
-  path: '/service/$slug',
-  getParentRoute: () => LangPublicRoute,
-} as any)
+const LangAppDashboardCalendarRoute =
+  LangAppDashboardCalendarRouteImport.update({
+    id: '/calendar',
+    path: '/calendar',
+    getParentRoute: () => LangAppDashboardRoute,
+  } as any)
+const LangAppDashboardAnalyticsRoute =
+  LangAppDashboardAnalyticsRouteImport.update({
+    id: '/analytics',
+    path: '/analytics',
+    getParentRoute: () => LangAppDashboardRoute,
+  } as any)
 const LangAppDashboardCasesIndexRoute =
   LangAppDashboardCasesIndexRouteImport.update({
     id: '/cases/',
@@ -460,18 +460,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/$lang': {
       id: '/$lang'
       path: '/$lang'
       fullPath: '/$lang'
       preLoaderRoute: typeof LangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/': {
@@ -481,13 +481,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/_app': {
-      id: '/$lang/_app'
-      path: ''
-      fullPath: '/$lang'
-      preLoaderRoute: typeof LangAppRouteImport
-      parentRoute: typeof LangRoute
-    }
     '/$lang/_public': {
       id: '/$lang/_public'
       path: ''
@@ -495,32 +488,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangPublicRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/_app/dashboard': {
-      id: '/$lang/_app/dashboard'
-      path: '/dashboard'
-      fullPath: '/$lang/dashboard'
-      preLoaderRoute: typeof LangAppDashboardRouteImport
-      parentRoute: typeof LangAppRoute
+    '/$lang/_app': {
+      id: '/$lang/_app'
+      path: ''
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangAppRouteImport
+      parentRoute: typeof LangRoute
     }
-    '/$lang/_public/about': {
-      id: '/$lang/_public/about'
-      path: '/about'
-      fullPath: '/$lang/about'
-      preLoaderRoute: typeof LangPublicAboutRouteImport
-      parentRoute: typeof LangPublicRoute
-    }
-    '/$lang/_public/contact': {
-      id: '/$lang/_public/contact'
-      path: '/contact'
-      fullPath: '/$lang/contact'
-      preLoaderRoute: typeof LangPublicContactRouteImport
-      parentRoute: typeof LangPublicRoute
-    }
-    '/$lang/_public/help-center': {
-      id: '/$lang/_public/help-center'
-      path: '/help-center'
-      fullPath: '/$lang/help-center'
-      preLoaderRoute: typeof LangPublicHelpCenterRouteImport
+    '/$lang/_public/terms-and-conditions': {
+      id: '/$lang/_public/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/$lang/terms-and-conditions'
+      preLoaderRoute: typeof LangPublicTermsAndConditionsRouteImport
       parentRoute: typeof LangPublicRoute
     }
     '/$lang/_public/privacy': {
@@ -530,144 +509,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangPublicPrivacyRouteImport
       parentRoute: typeof LangPublicRoute
     }
-    '/$lang/_public/terms-and-conditions': {
-      id: '/$lang/_public/terms-and-conditions'
-      path: '/terms-and-conditions'
-      fullPath: '/$lang/terms-and-conditions'
-      preLoaderRoute: typeof LangPublicTermsAndConditionsRouteImport
+    '/$lang/_public/help-center': {
+      id: '/$lang/_public/help-center'
+      path: '/help-center'
+      fullPath: '/$lang/help-center'
+      preLoaderRoute: typeof LangPublicHelpCenterRouteImport
       parentRoute: typeof LangPublicRoute
     }
-    '/$lang/_app/dashboard/': {
-      id: '/$lang/_app/dashboard/'
-      path: '/'
-      fullPath: '/$lang/dashboard/'
-      preLoaderRoute: typeof LangAppDashboardIndexRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/analytics': {
-      id: '/$lang/_app/dashboard/analytics'
-      path: '/analytics'
-      fullPath: '/$lang/dashboard/analytics'
-      preLoaderRoute: typeof LangAppDashboardAnalyticsRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/calendar': {
-      id: '/$lang/_app/dashboard/calendar'
-      path: '/calendar'
-      fullPath: '/$lang/dashboard/calendar'
-      preLoaderRoute: typeof LangAppDashboardCalendarRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/clients': {
-      id: '/$lang/_app/dashboard/clients'
-      path: '/clients'
-      fullPath: '/$lang/dashboard/clients'
-      preLoaderRoute: typeof LangAppDashboardClientsRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/documents': {
-      id: '/$lang/_app/dashboard/documents'
-      path: '/documents'
-      fullPath: '/$lang/dashboard/documents'
-      preLoaderRoute: typeof LangAppDashboardDocumentsRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/fields': {
-      id: '/$lang/_app/dashboard/fields'
-      path: '/fields'
-      fullPath: '/$lang/dashboard/fields'
-      preLoaderRoute: typeof LangAppDashboardFieldsRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/messages': {
-      id: '/$lang/_app/dashboard/messages'
-      path: '/messages'
-      fullPath: '/$lang/dashboard/messages'
-      preLoaderRoute: typeof LangAppDashboardMessagesRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/posts': {
-      id: '/$lang/_app/dashboard/posts'
-      path: '/posts'
-      fullPath: '/$lang/dashboard/posts'
-      preLoaderRoute: typeof LangAppDashboardPostsRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/services': {
-      id: '/$lang/_app/dashboard/services'
-      path: '/services'
-      fullPath: '/$lang/dashboard/services'
-      preLoaderRoute: typeof LangAppDashboardServicesRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/setting': {
-      id: '/$lang/_app/dashboard/setting'
-      path: '/setting'
-      fullPath: '/$lang/dashboard/setting'
-      preLoaderRoute: typeof LangAppDashboardSettingRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/tasks': {
-      id: '/$lang/_app/dashboard/tasks'
-      path: '/tasks'
-      fullPath: '/$lang/dashboard/tasks'
-      preLoaderRoute: typeof LangAppDashboardTasksRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/team': {
-      id: '/$lang/_app/dashboard/team'
-      path: '/team'
-      fullPath: '/$lang/dashboard/team'
-      preLoaderRoute: typeof LangAppDashboardTeamRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_app/dashboard/transaction': {
-      id: '/$lang/_app/dashboard/transaction'
-      path: '/transaction'
-      fullPath: '/$lang/dashboard/transaction'
-      preLoaderRoute: typeof LangAppDashboardTransactionRouteImport
-      parentRoute: typeof LangAppDashboardRoute
-    }
-    '/$lang/_public/clients/': {
-      id: '/$lang/_public/clients/'
-      path: '/clients'
-      fullPath: '/$lang/clients/'
-      preLoaderRoute: typeof LangPublicClientsIndexRouteImport
+    '/$lang/_public/contact': {
+      id: '/$lang/_public/contact'
+      path: '/contact'
+      fullPath: '/$lang/contact'
+      preLoaderRoute: typeof LangPublicContactRouteImport
       parentRoute: typeof LangPublicRoute
     }
-    '/$lang/_public/clients/$id': {
-      id: '/$lang/_public/clients/$id'
-      path: '/clients/$id'
-      fullPath: '/$lang/clients/$id'
-      preLoaderRoute: typeof LangPublicClientsIdRouteImport
+    '/$lang/_public/about': {
+      id: '/$lang/_public/about'
+      path: '/about'
+      fullPath: '/$lang/about'
+      preLoaderRoute: typeof LangPublicAboutRouteImport
       parentRoute: typeof LangPublicRoute
     }
-    '/$lang/_public/fields/': {
-      id: '/$lang/_public/fields/'
-      path: '/fields'
-      fullPath: '/$lang/fields/'
-      preLoaderRoute: typeof LangPublicFieldsIndexRouteImport
-      parentRoute: typeof LangPublicRoute
+    '/$lang/_app/dashboard': {
+      id: '/$lang/_app/dashboard'
+      path: '/dashboard'
+      fullPath: '/$lang/dashboard'
+      preLoaderRoute: typeof LangAppDashboardRouteImport
+      parentRoute: typeof LangAppRoute
     }
-    '/$lang/_public/fields/$slug': {
-      id: '/$lang/_public/fields/$slug'
-      path: '/fields/$slug'
-      fullPath: '/$lang/fields/$slug'
-      preLoaderRoute: typeof LangPublicFieldsSlugRouteImport
-      parentRoute: typeof LangPublicRoute
-    }
-    '/$lang/_public/lawyers/': {
-      id: '/$lang/_public/lawyers/'
-      path: '/lawyers'
-      fullPath: '/$lang/lawyers/'
-      preLoaderRoute: typeof LangPublicLawyersIndexRouteImport
-      parentRoute: typeof LangPublicRoute
-    }
-    '/$lang/_public/lawyers/$id': {
-      id: '/$lang/_public/lawyers/$id'
-      path: '/lawyers/$id'
-      fullPath: '/$lang/lawyers/$id'
-      preLoaderRoute: typeof LangPublicLawyersIdRouteImport
+    '/$lang/_public/service/': {
+      id: '/$lang/_public/service/'
+      path: '/service'
+      fullPath: '/$lang/service/'
+      preLoaderRoute: typeof LangPublicServiceIndexRouteImport
       parentRoute: typeof LangPublicRoute
     }
     '/$lang/_public/posts/': {
@@ -677,19 +551,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangPublicPostsIndexRouteImport
       parentRoute: typeof LangPublicRoute
     }
-    '/$lang/_public/posts/$slug': {
-      id: '/$lang/_public/posts/$slug'
-      path: '/posts/$slug'
-      fullPath: '/$lang/posts/$slug'
-      preLoaderRoute: typeof LangPublicPostsSlugRouteImport
+    '/$lang/_public/lawyers/': {
+      id: '/$lang/_public/lawyers/'
+      path: '/lawyers'
+      fullPath: '/$lang/lawyers/'
+      preLoaderRoute: typeof LangPublicLawyersIndexRouteImport
       parentRoute: typeof LangPublicRoute
     }
-    '/$lang/_public/service/': {
-      id: '/$lang/_public/service/'
-      path: '/service'
-      fullPath: '/$lang/service/'
-      preLoaderRoute: typeof LangPublicServiceIndexRouteImport
+    '/$lang/_public/fields/': {
+      id: '/$lang/_public/fields/'
+      path: '/fields'
+      fullPath: '/$lang/fields/'
+      preLoaderRoute: typeof LangPublicFieldsIndexRouteImport
       parentRoute: typeof LangPublicRoute
+    }
+    '/$lang/_public/clients/': {
+      id: '/$lang/_public/clients/'
+      path: '/clients'
+      fullPath: '/$lang/clients/'
+      preLoaderRoute: typeof LangPublicClientsIndexRouteImport
+      parentRoute: typeof LangPublicRoute
+    }
+    '/$lang/_app/dashboard/': {
+      id: '/$lang/_app/dashboard/'
+      path: '/'
+      fullPath: '/$lang/dashboard/'
+      preLoaderRoute: typeof LangAppDashboardIndexRouteImport
+      parentRoute: typeof LangAppDashboardRoute
     }
     '/$lang/_public/service/$slug': {
       id: '/$lang/_public/service/$slug'
@@ -697,6 +585,118 @@ declare module '@tanstack/react-router' {
       fullPath: '/$lang/service/$slug'
       preLoaderRoute: typeof LangPublicServiceSlugRouteImport
       parentRoute: typeof LangPublicRoute
+    }
+    '/$lang/_public/posts/$slug': {
+      id: '/$lang/_public/posts/$slug'
+      path: '/posts/$slug'
+      fullPath: '/$lang/posts/$slug'
+      preLoaderRoute: typeof LangPublicPostsSlugRouteImport
+      parentRoute: typeof LangPublicRoute
+    }
+    '/$lang/_public/lawyers/$id': {
+      id: '/$lang/_public/lawyers/$id'
+      path: '/lawyers/$id'
+      fullPath: '/$lang/lawyers/$id'
+      preLoaderRoute: typeof LangPublicLawyersIdRouteImport
+      parentRoute: typeof LangPublicRoute
+    }
+    '/$lang/_public/fields/$slug': {
+      id: '/$lang/_public/fields/$slug'
+      path: '/fields/$slug'
+      fullPath: '/$lang/fields/$slug'
+      preLoaderRoute: typeof LangPublicFieldsSlugRouteImport
+      parentRoute: typeof LangPublicRoute
+    }
+    '/$lang/_public/clients/$id': {
+      id: '/$lang/_public/clients/$id'
+      path: '/clients/$id'
+      fullPath: '/$lang/clients/$id'
+      preLoaderRoute: typeof LangPublicClientsIdRouteImport
+      parentRoute: typeof LangPublicRoute
+    }
+    '/$lang/_app/dashboard/transaction': {
+      id: '/$lang/_app/dashboard/transaction'
+      path: '/transaction'
+      fullPath: '/$lang/dashboard/transaction'
+      preLoaderRoute: typeof LangAppDashboardTransactionRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/team': {
+      id: '/$lang/_app/dashboard/team'
+      path: '/team'
+      fullPath: '/$lang/dashboard/team'
+      preLoaderRoute: typeof LangAppDashboardTeamRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/tasks': {
+      id: '/$lang/_app/dashboard/tasks'
+      path: '/tasks'
+      fullPath: '/$lang/dashboard/tasks'
+      preLoaderRoute: typeof LangAppDashboardTasksRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/setting': {
+      id: '/$lang/_app/dashboard/setting'
+      path: '/setting'
+      fullPath: '/$lang/dashboard/setting'
+      preLoaderRoute: typeof LangAppDashboardSettingRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/services': {
+      id: '/$lang/_app/dashboard/services'
+      path: '/services'
+      fullPath: '/$lang/dashboard/services'
+      preLoaderRoute: typeof LangAppDashboardServicesRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/posts': {
+      id: '/$lang/_app/dashboard/posts'
+      path: '/posts'
+      fullPath: '/$lang/dashboard/posts'
+      preLoaderRoute: typeof LangAppDashboardPostsRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/messages': {
+      id: '/$lang/_app/dashboard/messages'
+      path: '/messages'
+      fullPath: '/$lang/dashboard/messages'
+      preLoaderRoute: typeof LangAppDashboardMessagesRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/fields': {
+      id: '/$lang/_app/dashboard/fields'
+      path: '/fields'
+      fullPath: '/$lang/dashboard/fields'
+      preLoaderRoute: typeof LangAppDashboardFieldsRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/documents': {
+      id: '/$lang/_app/dashboard/documents'
+      path: '/documents'
+      fullPath: '/$lang/dashboard/documents'
+      preLoaderRoute: typeof LangAppDashboardDocumentsRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/clients': {
+      id: '/$lang/_app/dashboard/clients'
+      path: '/clients'
+      fullPath: '/$lang/dashboard/clients'
+      preLoaderRoute: typeof LangAppDashboardClientsRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/calendar': {
+      id: '/$lang/_app/dashboard/calendar'
+      path: '/calendar'
+      fullPath: '/$lang/dashboard/calendar'
+      preLoaderRoute: typeof LangAppDashboardCalendarRouteImport
+      parentRoute: typeof LangAppDashboardRoute
+    }
+    '/$lang/_app/dashboard/analytics': {
+      id: '/$lang/_app/dashboard/analytics'
+      path: '/analytics'
+      fullPath: '/$lang/dashboard/analytics'
+      preLoaderRoute: typeof LangAppDashboardAnalyticsRouteImport
+      parentRoute: typeof LangAppDashboardRoute
     }
     '/$lang/_app/dashboard/cases/': {
       id: '/$lang/_app/dashboard/cases/'
