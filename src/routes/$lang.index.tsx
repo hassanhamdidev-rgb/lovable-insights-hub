@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroImage from "@/assets/legal-hero.jpg.asset.json";
+import heroImage from "@/assets/lawvera-hero.png.asset.json";
 
 import {
   Scale,
@@ -129,48 +129,48 @@ function Hero() {
       <div className="absolute inset-0 -z-10">
         <img
           src={heroImage.url}
-          alt="Scales of justice and gavel on a wooden desk"
-          className="h-full w-full object-cover animate-slow-zoom"
+          alt="LawVera — legal management system"
+          className="h-full w-full object-cover object-center animate-slow-zoom"
           loading="eager"
         />
-        {/* Layered overlays for legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-e from-background/85 via-background/40 to-transparent" />
+        {/* Legibility overlays — tuned for both themes */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#071426]/40 via-[#071426]/25 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/55 to-transparent rtl:bg-gradient-to-l" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-24 md:px-6 md:py-36 lg:py-44">
         <div className="max-w-2xl animate-fade-in-up">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1 text-xs text-muted-foreground backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 animate-pulse text-primary" />
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/40 bg-card/80 px-3 py-1 text-xs font-medium text-foreground/80 shadow-sm backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5 animate-pulse text-accent" />
             AI-assisted legal workflow
           </span>
           <h1 className="mt-5 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
             Run your legal practice —{" "}
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x">
+            <span className="bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x">
               without the paperwork.
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-base text-foreground/80 md:text-lg">
-            LexOffice brings law offices, lawyers, employees, and clients together in one
+            LawVera brings law offices, lawyers, employees, and clients together in one
             multi-tenant workspace. Manage cases, documents, hearings, and billing with an AI
             assistant, in 7 languages including full RTL Arabic.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               to="/$lang/dashboard" params={{ lang }}
-              className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-primary/40"
+              className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 ring-1 ring-primary/10 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-primary/40"
             >
               Start free{" "}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
             </Link>
             <a
               href="#how"
-              className="inline-flex items-center gap-2 rounded-md border border-input bg-background/60 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-accent"
+              className="inline-flex items-center gap-2 rounded-md border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground shadow-sm backdrop-blur transition-colors hover:bg-card"
             >
               See how it works
             </a>
           </div>
-          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border/60 pt-6 text-sm">
+          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 rounded-xl border border-border/60 bg-card/60 p-5 shadow-sm backdrop-blur text-sm">
             {[
               { k: "Law offices", v: "1,200+" },
               { k: "Cases handled", v: "84k" },
@@ -178,7 +178,7 @@ function Hero() {
             ].map((s) => (
               <div key={s.k}>
                 <dt className="text-muted-foreground">{s.k}</dt>
-                <dd className="mt-1 text-2xl font-semibold tabular-nums">{s.v}</dd>
+                <dd className="mt-1 text-2xl font-semibold tabular-nums text-foreground">{s.v}</dd>
               </div>
             ))}
           </dl>
